@@ -1,5 +1,5 @@
 # Use the official SearXNG image
-FROM docker.io/searxng/searxng:latest
+FROM searxng/searxng:latest
 
 # Expose the correct port
 EXPOSE 8080
