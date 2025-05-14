@@ -1,7 +1,7 @@
 FROM docker.io/searxng/searxng:latest
 
-# Expose the port that SearXNG uses internally
-EXPOSE 8080
+ENV PORT=10000
 
-# Start the app
-CMD ["uwsgi", "--ini", "/etc/searxng/uwsgi.ini"]
+EXPOSE 10000
+
+CMD ["uwsgi", "--http", ":10000", "--ini", "/etc/searxng/uwsgi.ini"]
